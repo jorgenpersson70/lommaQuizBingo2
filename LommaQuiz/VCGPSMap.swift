@@ -144,6 +144,8 @@ class VCGPSMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                 }
             
         })
+        
+     
     }
     
     func checkIfTestSimulator2(){
@@ -373,7 +375,7 @@ class VCGPSMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                     print(pin.coordinate.longitude)
                     print("-------------------")
                     print("questionnumber \(i+1)")
-                    // I think this is around the same as meters
+                    // I think this is around the same as meters 15 var bra men för test kör 50
                     if (pin.coordinate.latitude < 15){
                         if (pin.coordinate.longitude < 15){
                             // kanske detta gör att vi inte hela tiden hoppar hem
@@ -422,7 +424,11 @@ class VCGPSMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     func GoToQuestion(questionNumber:Int) {
         if (quizname == "Bingo"){
-            performSegue(withIdentifier: "showBingo", sender: questionNumber)
+            if (UIScreen.main.bounds.width < 400.0){
+                performSegue(withIdentifier: "gotoBingoSmall", sender: questionNumber)
+            }else{
+                performSegue(withIdentifier: "showBingo", sender: questionNumber)
+            }
         }else{
             performSegue(withIdentifier: "showQuestion", sender: questionNumber)
         }
@@ -437,37 +443,72 @@ class VCGPSMap: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
      
             dest.questionnumberInt = sender as! Int
         }else{
-            let dest = segue.destination as! VCSeeBingoPlayerRun
-            var BingoPosInt = sender as! Int
-            
-            var ValuePos = 0
-            
-            BingoPosInt -= 1
-            
-            ValuePos = BingoPosInt * 3
-            
-            dest.ValuesToEvaluateB = ValuesToPresentBRead
-            dest.ValuesToEvaluateI = ValuesToPresentIRead
-            dest.ValuesToEvaluateN = ValuesToPresentNRead
-            dest.ValuesToEvaluateG = ValuesToPresentGRead
-            dest.ValuesToEvaluateO = ValuesToPresentORead
-            
-            dest.ValueToPopUp1 = ValuesToPopUp[ValuePos]
-            dest.ValueToPopUp2 = ValuesToPopUp[ValuePos+1]
-            if (ValuePos == 33){
-                dest.ValueToPopUp3 = 0
-            }else{
-                dest.ValueToPopUp3 = ValuesToPopUp[ValuePos+2]
+            if (segue.identifier == "gotoBingoSmall"){
+                let dest = segue.destination as! VCBingoSmall
+                var BingoPosInt = sender as! Int
+                
+                var ValuePos = 0
+                
+                BingoPosInt -= 1
+                
+                ValuePos = BingoPosInt * 3
+                
+                dest.ValuesToEvaluateB = ValuesToPresentBRead
+                dest.ValuesToEvaluateI = ValuesToPresentIRead
+                dest.ValuesToEvaluateN = ValuesToPresentNRead
+                dest.ValuesToEvaluateG = ValuesToPresentGRead
+                dest.ValuesToEvaluateO = ValuesToPresentORead
+                
+                dest.ValueToPopUp1 = ValuesToPopUp[ValuePos]
+                dest.ValueToPopUp2 = ValuesToPopUp[ValuePos+1]
+                if (ValuePos == 33){
+                    dest.ValueToPopUp3 = 0
+                }else{
+                    dest.ValueToPopUp3 = ValuesToPopUp[ValuePos+2]
+                }
+                
+                dest.BValues = BValuesRead
+                dest.IValues = IValuesRead
+                dest.NValues = NValuesRead
+                dest.GValues = GValuesRead
+                dest.OValues = OValuesRead
+                
+                dest.quizname = quizname
+                dest.questionnumberInt = sender as! Int
             }
-            
-            dest.BValues = BValuesRead
-            dest.IValues = IValuesRead
-            dest.NValues = NValuesRead
-            dest.GValues = GValuesRead
-            dest.OValues = OValuesRead
-            
-            dest.quizname = quizname
-            dest.questionnumberInt = sender as! Int
+            else{
+                let dest = segue.destination as! VCSeeBingoPlayerRun
+                var BingoPosInt = sender as! Int
+                
+                var ValuePos = 0
+                
+                BingoPosInt -= 1
+                
+                ValuePos = BingoPosInt * 3
+                
+                dest.ValuesToEvaluateB = ValuesToPresentBRead
+                dest.ValuesToEvaluateI = ValuesToPresentIRead
+                dest.ValuesToEvaluateN = ValuesToPresentNRead
+                dest.ValuesToEvaluateG = ValuesToPresentGRead
+                dest.ValuesToEvaluateO = ValuesToPresentORead
+                
+                dest.ValueToPopUp1 = ValuesToPopUp[ValuePos]
+                dest.ValueToPopUp2 = ValuesToPopUp[ValuePos+1]
+                if (ValuePos == 33){
+                    dest.ValueToPopUp3 = 0
+                }else{
+                    dest.ValueToPopUp3 = ValuesToPopUp[ValuePos+2]
+                }
+                
+                dest.BValues = BValuesRead
+                dest.IValues = IValuesRead
+                dest.NValues = NValuesRead
+                dest.GValues = GValuesRead
+                dest.OValues = OValuesRead
+                
+                dest.quizname = quizname
+                dest.questionnumberInt = sender as! Int
+            }
         }
         
     }
