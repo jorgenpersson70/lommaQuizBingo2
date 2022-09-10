@@ -15,6 +15,11 @@ class VCAuth: UIViewController {
     
     @IBOutlet weak var showStatusTV: UITextView!
     
+    
+    @IBOutlet weak var showWidth: UITextField!
+    
+    @IBOutlet weak var showHeight: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // to make it easier for the people creating bingo-rundor
@@ -34,6 +39,15 @@ class VCAuth: UIViewController {
         if (Auth.auth().currentUser?.email == "rundac@icloud.com"){
             showStatusTV.text = "Inloggad för att skapa runda, tryck Back och Back och VÄLJ PROMENAD"
         }
+        var width = UIScreen.main.bounds.width.description
+        var height = UIScreen.main.bounds.height.description
+     
+        showWidth.text = width
+        showWidth.isHidden = true
+        
+        showHeight.text = height
+        showHeight.isHidden = true
+        
         
     }
     
@@ -57,6 +71,11 @@ class VCAuth: UIViewController {
               print("Error signing out: %@", signOutError)
                 showStatusTV.text = "Fel vid utloggning"
             }
+    }
+    
+    
+    @IBAction func returnWritePassword(_ sender: UITextField) {
+        sender.resignFirstResponder()
     }
     
     func forceLogout() {
