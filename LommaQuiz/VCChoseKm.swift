@@ -27,6 +27,7 @@ class VCChoseKm: UIViewController, UITableViewDelegate, UITableViewDataSource{
         if (BingoName != ""){
             // if they just created a new bingo and start again, clear
             VCSeeBingoPlayerRun().clearGrayCells()
+            VCBingoSmall().clearGrayCells()
             performSegue(withIdentifier: "karta", sender: "Bingo")
         }else{
             if (quiznamelist.isEmpty){
