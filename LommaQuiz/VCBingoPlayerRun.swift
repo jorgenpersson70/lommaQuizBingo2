@@ -14,6 +14,7 @@ var cellsThatAreGrayChart2 : [Int] = Array(repeating: 0, count: 25)
 var cellsThatAreGrayChart3 : [Int] = Array(repeating: 0, count: 25)
 var prevNumbers : [Int] = Array(repeating: 0, count: 36)
 
+
 class VCSeeBingoPlayerRun:  UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var ref: DatabaseReference!
@@ -119,6 +120,7 @@ class VCSeeBingoPlayerRun:  UIViewController, UICollectionViewDelegate, UICollec
     @IBOutlet weak var showPoistion: UITextField!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -131,6 +133,8 @@ class VCSeeBingoPlayerRun:  UIViewController, UICollectionViewDelegate, UICollec
         self.winnerTV.isHidden = true
         self.proofOfWinnerAlert.isHidden = true
         showPoistion.text = String(questionnumberInt)
+        // test
+  //      BingoName = "tvs"
         
         let postRef = ref.child("BingoPlayerWinner").child(BingoName)
         
@@ -142,16 +146,22 @@ class VCSeeBingoPlayerRun:  UIViewController, UICollectionViewDelegate, UICollec
             
             self.proofOfWinnerAlert.isHidden = false
             var theWinner = snapshot.value as! String
+            WinnerIs = theWinner
          //   var theWinnerInt = snapshot.value as! Int
             
             var theWinnerInt = Int(theWinner)
             
             if (theWinnerInt == youAreplayer){
+                self.proofOfWinnerAlert.isHidden = false
+                self.winnerTV.isHidden = false
                 self.winnerTV.text = "Grattis, du har fått BINGO. Har ni satsat något, du och de andra deltagarna? En fika, kaffe, eller vem som skall diska eller dammsuga."
                 // alert, when you press TILLBAKA, your proof of winning is lost.
                 self.NextButton.backgroundColor = .red
+                proofOfWinnerAlert.text = "OBS! När du trycker NÄSTA så försvinner ditt bevis på att du vann."
             }else{
-                self.winnerTV.text = "Deltagare " + theWinner + " har fått BINGO"
+                waitToTheLastToShowLooser = true
+              //  self.winnerTV.text = "Deltagare " + theWinner + " har fått BINGO"
+              //  proofOfWinnerAlert.text = "OBS! När du trycker NÄSTA så kan du inte se bingobrickorna igen"
             }
             self.winnerTV.isHidden = false
         })
@@ -278,7 +288,8 @@ class VCSeeBingoPlayerRun:  UIViewController, UICollectionViewDelegate, UICollec
                 countTheValues += 1
             }
         }
-        if (countTheValues == 36){
+        if (countTheValues == 35){
+            
             return true
         }else{
             return false
@@ -286,7 +297,7 @@ class VCSeeBingoPlayerRun:  UIViewController, UICollectionViewDelegate, UICollec
     }
     
     // just for test
-    func setGrayAuto(){
+    func setGrayAutoNotUsed(){
         for i in 0...14{
             if (i < 5){
                 for n in 0...6{
@@ -815,8 +826,14 @@ class VCSeeBingoPlayerRun:  UIViewController, UICollectionViewDelegate, UICollec
         }
         
         checkIfBingo()
+        if ((waitToTheLastToShowLooser) && walkfiniched()){
+            self.proofOfWinnerAlert.isHidden = false
+            self.winnerTV.isHidden = false
+            self.winnerTV.text = "Deltagare " + WinnerIs + " har fått BINGO"
+            proofOfWinnerAlert.text = "OBS! När du trycker NÄSTA så kan du inte se bingobrickorna igen"
+        }
     }
-    
+    // remember. If I start the same walk over and over and winner is written to database, there will be no alert.
     func checkIfBingo(){
         var countInRow1 = 0
         var countInRow2 = 0
@@ -1061,6 +1078,8 @@ class VCSeeBingoPlayerRun:  UIViewController, UICollectionViewDelegate, UICollec
             takeAwayButtonToChooseRunda = false
             questUserBingo = ""
             BingoName = ""
+            waitToTheLastToShowLooser = false
+            WinnerIs = ""
             performSegue(withIdentifier: "bingoBackToStart", sender: 1)
         }else{
             performSegue(withIdentifier: "bingoBackToMap", sender: 1)
@@ -1086,6 +1105,8 @@ class VCSeeBingoPlayerRun:  UIViewController, UICollectionViewDelegate, UICollec
     {
         print("you are ", youAreplayer)
         self.ref.child("BingoPlayerWinner").child(BingoName).child("TheWinner").setValue(String(youAreplayer))
+        
+        
   //      self.ref.child("BingoPlayerWinner").child(BingoName).child("TheWinner").setValue("Deltagare " + String(youAreplayer) + "har fått BINGO")
     }
     
