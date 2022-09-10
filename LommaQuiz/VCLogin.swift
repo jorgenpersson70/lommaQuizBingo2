@@ -147,7 +147,22 @@ class VCLogin: UIViewController {
         self.view.endEditing(true)
         return false
     }*/
+    
+    @IBAction func returnWritePassword(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
     @IBAction func done(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    
+    @IBAction func endWritingBingoName(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    // gets rid of the keyboard
+    @IBAction func returnWriteBingoName(_ sender: UITextField) {
         sender.resignFirstResponder()
     }
     
@@ -310,7 +325,9 @@ class VCLogin: UIViewController {
                                                 
                                                 // sätt maxlängd på sträng
                                                 showIfLoginLogout.text = "Du är inloggad på " + BingoName + " som deltagare nr " + String(youAreplayer)
-                                                
+                                                // from VCBingoSmall, I think I have to reset it to be sure
+                                                waitToTheLastToShowLooser = false
+                                                WinnerIs = ""
                                                 
                                                 // here we know that values to present have been read
                                                 getTheValuesToPopUp()
