@@ -16,6 +16,11 @@
 		FA48392F276CA2320078CF24 /* VCCopyWalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA48392E276CA2320078CF24 /* VCCopyWalk.swift */; };
 		FA529B3228C4D4BD00810F77 /* TVCSpecialWalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA529B3128C4D4BD00810F77 /* TVCSpecialWalk.swift */; };
 		FA529B3428C4D67800810F77 /* VCListSpecialWalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA529B3328C4D67800810F77 /* VCListSpecialWalk.swift */; };
+		FA583D2C28CB92D700F36E1A /* VCBingoSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA583D2B28CB92D700F36E1A /* VCBingoSmall.swift */; };
+		FA583D2E28CB9B5A00F36E1A /* CVCell1Small.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA583D2D28CB9B5900F36E1A /* CVCell1Small.swift */; };
+		FA583D3028CB9B8300F36E1A /* CVCell2Small.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA583D2F28CB9B8300F36E1A /* CVCell2Small.swift */; };
+		FA583D3228CB9B9900F36E1A /* CVCell3Small.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA583D3128CB9B9900F36E1A /* CVCell3Small.swift */; };
+		FA583D3428CB9F0200F36E1A /* CVCellBingoShowPrevSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA583D3328CB9F0200F36E1A /* CVCellBingoShowPrevSmall.swift */; };
 		FA932C0C28A56780003EAFA3 /* lommaAnim2.json in Resources */ = {isa = PBXBuildFile; fileRef = FA932C0B28A56780003EAFA3 /* lommaAnim2.json */; };
 		FA97195728C7B54D00296032 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA97195628C7B54D00296032 /* GoogleService-Info.plist */; };
 		FA9CD77E28B4F48400336895 /* VCBingoPlayerRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CD77D28B4F48400336895 /* VCBingoPlayerRun.swift */; };
@@ -23,6 +28,8 @@
 		FA9CD78228B4F84A00336895 /* CVCellBingoChart2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CD78128B4F84A00336895 /* CVCellBingoChart2.swift */; };
 		FA9CD78428B4F85E00336895 /* CVCellBingoChart3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CD78328B4F85E00336895 /* CVCellBingoChart3.swift */; };
 		FA9CD78628B6A1DF00336895 /* CVCellBingoShowPrev.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CD78528B6A1DF00336895 /* CVCellBingoShowPrev.swift */; };
+		FAA8D68A28CA3967007E7633 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA8D68928CA3967007E7633 /* Main.storyboard */; };
+		FAA8D68C28CA6159007E7633 /* VCNewStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8D68B28CA6159007E7633 /* VCNewStart.swift */; };
 		FAB3B58428A282A0003BE5F5 /* myfirstjson.json in Resources */ = {isa = PBXBuildFile; fileRef = FAB3B58328A282A0003BE5F5 /* myfirstjson.json */; };
 		FAD9836C275E7A88004CA143 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9836B275E7A88004CA143 /* AppDelegate.swift */; };
 		FAD9836E275E7A88004CA143 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9836D275E7A88004CA143 /* SceneDelegate.swift */; };
@@ -48,7 +55,6 @@
 		FAD983AE275E7F88004CA143 /* annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD983AD275E7F88004CA143 /* annotation.swift */; };
 		FAD983B0275E7F91004CA143 /* VCLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD983AF275E7F90004CA143 /* VCLogin.swift */; };
 		FAD983B2275E7F99004CA143 /* VCAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD983B1275E7F99004CA143 /* VCAuth.swift */; };
-		FAD983B4275E8013004CA143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD983B3275E8013004CA143 /* Main.storyboard */; };
 		FAEA1F3E28AA89E5002567BD /* bil3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FAEA1F3D28AA89E5002567BD /* bil3.jpeg */; };
 		FAF860F32770EBEA003126AB /* VCSomeQuestMissed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF860F22770EBEA003126AB /* VCSomeQuestMissed.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +71,11 @@
 		FA48392E276CA2320078CF24 /* VCCopyWalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCopyWalk.swift; sourceTree = "<group>"; };
 		FA529B3128C4D4BD00810F77 /* TVCSpecialWalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVCSpecialWalk.swift; sourceTree = "<group>"; };
 		FA529B3328C4D67800810F77 /* VCListSpecialWalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCListSpecialWalk.swift; sourceTree = "<group>"; };
+		FA583D2B28CB92D700F36E1A /* VCBingoSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCBingoSmall.swift; sourceTree = "<group>"; };
+		FA583D2D28CB9B5900F36E1A /* CVCell1Small.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCell1Small.swift; sourceTree = "<group>"; };
+		FA583D2F28CB9B8300F36E1A /* CVCell2Small.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCell2Small.swift; sourceTree = "<group>"; };
+		FA583D3128CB9B9900F36E1A /* CVCell3Small.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCell3Small.swift; sourceTree = "<group>"; };
+		FA583D3328CB9F0200F36E1A /* CVCellBingoShowPrevSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCellBingoShowPrevSmall.swift; sourceTree = "<group>"; };
 		FA932C0B28A56780003EAFA3 /* lommaAnim2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lommaAnim2.json; sourceTree = "<group>"; };
 		FA97195628C7B54D00296032 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA9CC4322783317200A04DED /* LommaQuiz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LommaQuiz.entitlements; sourceTree = "<group>"; };
@@ -73,6 +84,8 @@
 		FA9CD78128B4F84A00336895 /* CVCellBingoChart2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCellBingoChart2.swift; sourceTree = "<group>"; };
 		FA9CD78328B4F85E00336895 /* CVCellBingoChart3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCellBingoChart3.swift; sourceTree = "<group>"; };
 		FA9CD78528B6A1DF00336895 /* CVCellBingoShowPrev.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVCellBingoShowPrev.swift; sourceTree = "<group>"; };
+		FAA8D68928CA3967007E7633 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FAA8D68B28CA6159007E7633 /* VCNewStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCNewStart.swift; sourceTree = "<group>"; };
 		FAB3B58328A282A0003BE5F5 /* myfirstjson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = myfirstjson.json; sourceTree = "<group>"; };
 		FAD98368275E7A88004CA143 /* LommaQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LommaQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD9836B275E7A88004CA143 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,7 +113,6 @@
 		FAD983AD275E7F88004CA143 /* annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = annotation.swift; sourceTree = "<group>"; };
 		FAD983AF275E7F90004CA143 /* VCLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCLogin.swift; sourceTree = "<group>"; };
 		FAD983B1275E7F99004CA143 /* VCAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCAuth.swift; sourceTree = "<group>"; };
-		FAD983B3275E8013004CA143 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FAEA1F3D28AA89E5002567BD /* bil3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bil3.jpeg; sourceTree = "<group>"; };
 		FAF860F22770EBEA003126AB /* VCSomeQuestMissed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSomeQuestMissed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,10 +178,10 @@
 				FA932C0B28A56780003EAFA3 /* lommaAnim2.json */,
 				FAD98383275E7E42004CA143 /* Pling-sound-effect.mp3 */,
 				FAD98389275E7E91004CA143 /* VCGPSMap.swift */,
+				FAA8D68928CA3967007E7633 /* Main.storyboard */,
 				FAD9836B275E7A88004CA143 /* AppDelegate.swift */,
 				FAD9836D275E7A88004CA143 /* SceneDelegate.swift */,
 				FAD9838B275E7EB2004CA143 /* ViewController.swift */,
-				FAD983B3275E8013004CA143 /* Main.storyboard */,
 				FAD9838D275E7EDB004CA143 /* VCShowWalk2.swift */,
 				FAD9838F275E7EF5004CA143 /* VCSetCoords.swift */,
 				FAD98391275E7F00004CA143 /* VCChooseSetCoords.swift */,
@@ -182,6 +194,7 @@
 				FAD9839F275E7F46004CA143 /* VCWriteQuestion.swift */,
 				FAD983A1275E7F4E004CA143 /* VCTwelveQuestions.swift */,
 				FAD983A5275E7F60004CA143 /* RadenTableViewCell.swift */,
+				FAA8D68B28CA6159007E7633 /* VCNewStart.swift */,
 				FAD98385275E7E64004CA143 /* Assets.xcassets */,
 				FAD98376275E7A8A004CA143 /* LaunchScreen.storyboard */,
 				FAD98379275E7A8A004CA143 /* Info.plist */,
@@ -200,6 +213,11 @@
 				FA9CD78528B6A1DF00336895 /* CVCellBingoShowPrev.swift */,
 				FA529B3128C4D4BD00810F77 /* TVCSpecialWalk.swift */,
 				FA529B3328C4D67800810F77 /* VCListSpecialWalk.swift */,
+				FA583D2B28CB92D700F36E1A /* VCBingoSmall.swift */,
+				FA583D2D28CB9B5900F36E1A /* CVCell1Small.swift */,
+				FA583D2F28CB9B8300F36E1A /* CVCell2Small.swift */,
+				FA583D3128CB9B9900F36E1A /* CVCell3Small.swift */,
+				FA583D3328CB9F0200F36E1A /* CVCellBingoShowPrevSmall.swift */,
 			);
 			path = LommaQuiz;
 			sourceTree = "<group>";
@@ -265,11 +283,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD98378275E7A8A004CA143 /* LaunchScreen.storyboard in Resources */,
-				FAD983B4275E8013004CA143 /* Main.storyboard in Resources */,
 				FA0908E32777A4F2007AFBC7 /* 79727-man-walking.json in Resources */,
 				FAB3B58428A282A0003BE5F5 /* myfirstjson.json in Resources */,
 				FAEA1F3E28AA89E5002567BD /* bil3.jpeg in Resources */,
 				FA0908E52777A4FE007AFBC7 /* 48522-girl-walking-with-bag.json in Resources */,
+				FAA8D68A28CA3967007E7633 /* Main.storyboard in Resources */,
 				FA932C0C28A56780003EAFA3 /* lommaAnim2.json in Resources */,
 				FAD98384275E7E43004CA143 /* Pling-sound-effect.mp3 in Resources */,
 				FA97195728C7B54D00296032 /* GoogleService-Info.plist in Resources */,
@@ -336,17 +354,21 @@
 				FA529B3228C4D4BD00810F77 /* TVCSpecialWalk.swift in Sources */,
 				FAD983A6275E7F60004CA143 /* RadenTableViewCell.swift in Sources */,
 				FAD98392275E7F00004CA143 /* VCChooseSetCoords.swift in Sources */,
+				FA583D3028CB9B8300F36E1A /* CVCell2Small.swift in Sources */,
 				FAD98394275E7F0B004CA143 /* TableViewCellDate.swift in Sources */,
 				FAD983B2275E7F99004CA143 /* VCAuth.swift in Sources */,
 				FAD9839A275E7F29004CA143 /* VCResultat.swift in Sources */,
 				FAD9838A275E7E91004CA143 /* VCGPSMap.swift in Sources */,
+				FAA8D68C28CA6159007E7633 /* VCNewStart.swift in Sources */,
 				FA48392F276CA2320078CF24 /* VCCopyWalk.swift in Sources */,
+				FA583D3428CB9F0200F36E1A /* CVCellBingoShowPrevSmall.swift in Sources */,
 				FAD9836C275E7A88004CA143 /* AppDelegate.swift in Sources */,
 				FA9CD78628B6A1DF00336895 /* CVCellBingoShowPrev.swift in Sources */,
 				FAD9836E275E7A88004CA143 /* SceneDelegate.swift in Sources */,
 				FAD98398275E7F20004CA143 /* VCSeeResultOneByOne.swift in Sources */,
 				FAD983A0275E7F46004CA143 /* VCWriteQuestion.swift in Sources */,
 				FA9CD78228B4F84A00336895 /* CVCellBingoChart2.swift in Sources */,
+				FA583D3228CB9B9900F36E1A /* CVCell3Small.swift in Sources */,
 				FAF860F32770EBEA003126AB /* VCSomeQuestMissed.swift in Sources */,
 				FAD98390275E7EF5004CA143 /* VCSetCoords.swift in Sources */,
 				FAD98396275E7F16004CA143 /* VCTestSound.swift in Sources */,
@@ -357,7 +379,9 @@
 				FAD98388275E7E82004CA143 /* runBackGround.swift in Sources */,
 				FA38CF8B28AFBA4400BB46FA /* VCBingo.swift in Sources */,
 				FA9CD77E28B4F48400336895 /* VCBingoPlayerRun.swift in Sources */,
+				FA583D2E28CB9B5A00F36E1A /* CVCell1Small.swift in Sources */,
 				FA152DCD289C58FE002265A9 /* greyscaled.swift in Sources */,
+				FA583D2C28CB92D700F36E1A /* VCBingoSmall.swift in Sources */,
 				FAD9839C275E7F31004CA143 /* VCWalkKm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,7 +544,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0;
+				MARKETING_VERSION = 3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jorgen-raby.LommaQuiz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -558,7 +582,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0;
+				MARKETING_VERSION = 3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jorgen-raby.LommaQuiz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
